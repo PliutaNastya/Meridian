@@ -442,7 +442,6 @@ h6 {
 }
 
 .select__value:after {
-  content: url(../../../img/icon-select.svg);
   -ms-flex-item-align: stretch;
       -ms-grid-row-align: stretch;
       align-self: stretch;
@@ -1779,8 +1778,13 @@ h6 {
   background: url(../img/main-block/main.jpg) center/cover no-repeat fixed; }
 
 .page__main-block {
-  position: relative;
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .no-webp .page__made-with{
@@ -1802,10 +1806,7 @@ h6 {
 }
 
 .main-block__content {
-  position: relative;
-  z-index: 3;
   color: #fff;
-  max-width: 62.5rem;
 }
 
 .main-block__title {
@@ -1910,8 +1911,9 @@ h6 {
 }
 
 .product-card__item:hover {
-  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  -webkit-transform: scale(1.01);
+      -ms-transform: scale(1.01);
+          transform: scale(1.01);
 }
 
 .product-card__text-block {
@@ -1937,7 +1939,6 @@ h6 {
 .product-card__title {
   line-height: 1.28;
   margin-bottom: 10px;
-  padding: 0px 10px;
 }
 
 .product-card__title a:hover {
@@ -1947,7 +1948,6 @@ h6 {
 .product-card__price {
   line-height: 1.28;
   color: #888887;
-  padding: 0px 10px;
 }
 
 .product-card__price:not(:last-child) {
@@ -2009,13 +2009,13 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  text-align: center !important;
 }
 
 .controll-slider-about__fraction {
@@ -2038,24 +2038,10 @@ h6 {
   position: relative;
 }
 
-.get-inspired__item::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 3;
-  opacity: 0;
-  -webkit-transition: opacity 0.5s ease 0s;
-  -o-transition: opacity 0.5s ease 0s;
-  transition: opacity 0.5s ease 0s;
-}
-
-.get-inspired__item:hover::before,
-.get-inspired__item:hover .get-inspired__view {
-  opacity: 1;
+.get-inspired__item:hover {
+  -webkit-transform: scale(1.01);
+      -ms-transform: scale(1.01);
+          transform: scale(1.01);
 }
 
 .get-inspired__image-ibg {
@@ -2826,7 +2812,7 @@ h6 {
 }
 
 .item-reviews__review p:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 10px !important;
 }
 
 .item-reviews__date {
@@ -3098,6 +3084,10 @@ h6 {
 
 .catalog-product__subtitle:hover {
   text-decoration: underline;
+}
+
+.select__value::after {
+  content: url(../img/icon-select.svg);
 }
 
 .swiper {
@@ -3965,6 +3955,26 @@ button.swiper-pagination-bullet {
 }
 
 @media (min-width: 61.99875em) {
+  .get-inspired__item::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 3;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s ease 0s;
+    -o-transition: opacity 0.5s ease 0s;
+    transition: opacity 0.5s ease 0s;
+  }
+
+  .get-inspired__item:hover::before,
+  .get-inspired__item:hover .get-inspired__view {
+    opacity: 1;
+  }
+
   .product__main {
     -ms-grid-columns: 57.6231884058% 1fr;
     grid-template-columns: 57.6231884058% 1fr;
@@ -4334,14 +4344,6 @@ button.swiper-pagination-bullet {
 
   .page__slider-about {
     padding-bottom: 6.25rem;
-  }
-
-  .main-block__container {
-    padding-top: 13.375rem;
-  }
-
-  .main-block__container {
-    padding-bottom: 20rem;
   }
 
   .main-block__text {
@@ -5385,14 +5387,6 @@ button.swiper-pagination-bullet {
     padding-bottom: 3.125rem;
   }
 
-  .main-block__container {
-    padding-top: 5rem;
-  }
-
-  .main-block__container {
-    padding-bottom: 5rem;
-  }
-
   .main-block__text {
     margin-top: 0.625rem;
   }
@@ -5995,7 +5989,7 @@ button.swiper-pagination-bullet {
   }
 
   .catalog__breadcrumbs:not(:last-child) {
-    margin-bottom: 1.25rem;
+    margin-bottom: 0.625rem;
   }
 
   .timer {
@@ -6011,7 +6005,7 @@ button.swiper-pagination-bullet {
   }
 
   .catalog__body {
-    padding-top: 3.125rem;
+    padding-top: 0.625rem;
   }
 
   .filter__title {
@@ -6433,6 +6427,14 @@ button.swiper-pagination-bullet {
             flex: 0 1 100%;
   }
 
+  .get-inspired__body {
+    gap: 15px;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 962px;
+    padding: 15px;
+  }
+
   .get-inspired__view {
     position: static;
     opacity: 1;
@@ -6531,6 +6533,11 @@ button.swiper-pagination-bullet {
 }
 
 @media (max-width: 47.99875em) {
+  .get-inspired__body {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
   .cart-table__table {
     -ms-grid-columns: (1fr)[3] 0.5fr;
     grid-template-columns: repeat(3, 1fr) 0.5fr;
@@ -6542,9 +6549,9 @@ button.swiper-pagination-bullet {
   }
 
   .item-reviews__review {
-    -ms-grid-columns: auto;
-    grid-template-columns: auto;
-    padding: 0;
+    -ms-grid-columns: auto !important;
+    grid-template-columns: auto !important;
+    padding: 0 !important;
   }
 
   .timer__item:not(:last-child)::after {
@@ -7703,30 +7710,6 @@ button.swiper-pagination-bullet {
 @supports not (padding-bottom: clamp( 3.125rem , 2.4281358885rem  +  3.4843205575vw , 6.25rem )) {
     .page__slider-about {
       padding-bottom: calc(3.125rem + 3.125 * (100vw - 20rem) / 89.6875);
-    }
-}
-
-@supports (padding-top: clamp( 5rem , 3.1324041812rem  +  9.3379790941vw , 13.375rem )) {
-    .main-block__container {
-      padding-top: clamp( 5rem , 3.1324041812rem  +  9.3379790941vw , 13.375rem );
-    }
-}
-
-@supports not (padding-top: clamp( 5rem , 3.1324041812rem  +  9.3379790941vw , 13.375rem )) {
-    .main-block__container {
-      padding-top: calc(5rem + 8.375 * (100vw - 20rem) / 89.6875);
-    }
-}
-
-@supports (padding-bottom: clamp( 5rem , 1.6550522648rem  +  16.724738676vw , 20rem )) {
-    .main-block__container {
-      padding-bottom: clamp( 5rem , 1.6550522648rem  +  16.724738676vw , 20rem );
-    }
-}
-
-@supports not (padding-bottom: clamp( 5rem , 1.6550522648rem  +  16.724738676vw , 20rem )) {
-    .main-block__container {
-      padding-bottom: calc(5rem + 15 * (100vw - 20rem) / 89.6875);
     }
 }
 
@@ -9520,15 +9503,15 @@ button.swiper-pagination-bullet {
     }
 }
 
-@supports (margin-bottom: clamp( 1.25rem , 0.9712543554rem  +  1.393728223vw , 2.5rem )) {
+@supports (margin-bottom: clamp( 0.625rem , 0.2068815331rem  +  2.0905923345vw , 2.5rem )) {
     .catalog__breadcrumbs:not(:last-child) {
-      margin-bottom: clamp( 1.25rem , 0.9712543554rem  +  1.393728223vw , 2.5rem );
+      margin-bottom: clamp( 0.625rem , 0.2068815331rem  +  2.0905923345vw , 2.5rem );
     }
 }
 
-@supports not (margin-bottom: clamp( 1.25rem , 0.9712543554rem  +  1.393728223vw , 2.5rem )) {
+@supports not (margin-bottom: clamp( 0.625rem , 0.2068815331rem  +  2.0905923345vw , 2.5rem )) {
     .catalog__breadcrumbs:not(:last-child) {
-      margin-bottom: calc(1.25rem + 1.25 * (100vw - 20rem) / 89.6875);
+      margin-bottom: calc(0.625rem + 1.875 * (100vw - 20rem) / 89.6875);
     }
 }
 
@@ -9568,15 +9551,15 @@ button.swiper-pagination-bullet {
     }
 }
 
-@supports (padding-top: clamp( 3.125rem , 2.4281358885rem  +  3.4843205575vw , 6.25rem )) {
+@supports (padding-top: clamp( 0.625rem , -0.6293554007rem  +  6.2717770035vw , 6.25rem )) {
     .catalog__body {
-      padding-top: clamp( 3.125rem , 2.4281358885rem  +  3.4843205575vw , 6.25rem );
+      padding-top: clamp( 0.625rem , -0.6293554007rem  +  6.2717770035vw , 6.25rem );
     }
 }
 
-@supports not (padding-top: clamp( 3.125rem , 2.4281358885rem  +  3.4843205575vw , 6.25rem )) {
+@supports not (padding-top: clamp( 0.625rem , -0.6293554007rem  +  6.2717770035vw , 6.25rem )) {
     .catalog__body {
-      padding-top: calc(3.125rem + 3.125 * (100vw - 20rem) / 89.6875);
+      padding-top: calc(0.625rem + 5.625 * (100vw - 20rem) / 89.6875);
     }
 }
 
