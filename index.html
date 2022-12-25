@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Meridian</title>
+</head>
+
+<body>
+	<div class="rootpage">
+		<h1>Meridian</h1>
+		<div class="rootpage__body">
+			<div>
+				<ol class="rootpage__list">
+					<li><a target="_blank" href="home.html">Home</a></li>
+					<li><a target="_blank" href="product-page.html">Product Page</a></li>
+					<li><a target="_blank" href="catalog.html">Catalog</a></li>
+					<li><a target="_blank" href="cart.html">Shopping cart</a></li>
+					<li><a target="_blank" href="about-us.html">About us</a></li>
+					<li><a target="_blank" href="contact-us.html">Contact us</a></li>
+					<li><a target="_blank" href="faqs.html">FAQs</a></li>
+				</ol>
+			</div>
+			<div class="rootpage__contacts contacts">
+				<a href="mailto:koicheva1996@gmail.com">koicheva1996@gmail.com</a>
+				<a href="tel:+380637104229">+380637104229</a>
+				<a href="https://t.me/pliutanastya">pliutanastya</a>
+			</div>
+		</div>
+	</div>
+</body>
+<style>
+	@charset "UTF-8";
+	@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
+
+	*,
+	*::before,
+	*::after {
+		padding: 0px;
+		margin: 0px;
+		border: 0px;
+		box-sizing: border-box;
+	}
+
+	html,
+	body {
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		min-width: 320px;
+		width: 100%;
+		background: hsla(154, 100%, 76%, 1);
+		background: linear-gradient(90deg, hsla(154, 100%, 76%, 1) 0%, hsla(234, 100%, 83%, 1) 50%, hsla(288, 100%, 81%, 1) 100%);
+		background: -moz-linear-gradient(90deg, hsla(154, 100%, 76%, 1) 0%, hsla(234, 100%, 83%, 1) 50%, hsla(288, 100%, 81%, 1) 100%);
+		background: -webkit-linear-gradient(90deg, hsla(154, 100%, 76%, 1) 0%, hsla(234, 100%, 83%, 1) 50%, hsla(288, 100%, 81%, 1) 100%);
+		filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#84FFC9", endColorstr="#AAB2FF", GradientType=1);
+	}
+
+	body {
+		font-family: Montserrat;
+		font-size: 100%;
+		line-height: 1;
+		font-size: 1.2rem;
+	}
+
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	a:visited {
+		text-decoration: underline;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+
+	ul li {
+		list-style: none;
+	}
+
+	.wrapper {
+		width: 100%;
+		min-height: 100%;
+		overflow: hidden;
+	}
+
+	.rootpage {
+		padding: 30px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	@media (max-width: 767px) {
+		.rootpage {
+			padding: 30px 15px;
+		}
+	}
+
+	h1 {
+		font-size: 2.5rem;
+		margin: 0px auto 2rem auto;
+	}
+
+	@media (max-width: 767px) {
+		h1 {
+			font-size: 1.85rem;
+			margin: 0px 0px 1.25rem 0px;
+		}
+	}
+
+	@media (max-width: 767px) {
+		h2 {
+			font-size: 1.125rem;
+			margin: 0px 0px 1rem 0px;
+		}
+	}
+
+	.rootpage__body {
+		display: flex;
+		column-gap: 200px;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.rootpage__list {
+		margin: 0px 0px 2.25rem 1.25rem;
+	}
+
+	.rootpage__list li:not(:last-child) {
+		margin: 0px 0px 15px 0px;
+	}
+
+	.contacts {
+		margin-left: auto;
+	}
+
+	.contacts a:not(:last-child) {
+		margin: 0px 0px 15px 0px;
+		display: block;
+	}
+</style>
+
+</html>
