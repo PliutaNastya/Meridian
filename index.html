@@ -22,11 +22,6 @@
 					<li><a target="_blank" href="faqs.html">FAQs</a></li>
 				</ol>
 			</div>
-			<div class="rootpage__contacts contacts">
-				<a href="mailto:koicheva1996@gmail.com">koicheva1996@gmail.com</a>
-				<a href="tel:+380637104229">+380637104229</a>
-				<a href="https://t.me/pliutanastya">pliutanastya</a>
-			</div>
 		</div>
 	</div>
 </body>
@@ -45,15 +40,11 @@
 
 	html,
 	body {
-		height: 100%;
+		height: 100vh;
 		margin: 0;
 		padding: 0;
 		min-width: 320px;
 		width: 100%;
-		background: hsla(154, 100%, 76%, 1);
-		background: linear-gradient(90deg, hsla(154, 100%, 76%, 1) 0%, hsla(234, 100%, 83%, 1) 50%, hsla(288, 100%, 81%, 1) 100%);
-		background: -moz-linear-gradient(90deg, hsla(154, 100%, 76%, 1) 0%, hsla(234, 100%, 83%, 1) 50%, hsla(288, 100%, 81%, 1) 100%);
-		background: -webkit-linear-gradient(90deg, hsla(154, 100%, 76%, 1) 0%, hsla(234, 100%, 83%, 1) 50%, hsla(288, 100%, 81%, 1) 100%);
 	}
 
 	body {
@@ -61,8 +52,8 @@
 		font-size: 100%;
 		line-height: 1;
 		font-size: 1.2rem;
+		background: url("img/rootpage/background.jpg") right center / cover no-repeat;
 	}
-
 	a {
 		text-decoration: none;
 		color: inherit;
@@ -87,12 +78,42 @@
 	}
 
 	.rootpage {
+		color: #002741;
+		height: 100%;
 		padding: 30px;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
 		max-width: 800px;
 		margin: 0 auto;
+		position: relative;
+		z-index: 50;
+		overflow: hidden;
+	}
+	.rootpage::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		transform: translateY(100%);
+		transition: transform 0.5s;
+		background: url("img/rootpage/developer.png") left bottom / 500px no-repeat;
+	}
+	body:hover .rootpage::before  {
+		transform: translateY(0);
+	}
+	@media (max-width: 859.98px) {
+		.rootpage::before {
+			background: url("img/rootpage/developer.png") left bottom / 300px no-repeat;
+		}
+	}
+	@media (max-width: 539.98px) {
+		.rootpage::before {
+			background: url("img/rootpage/developer.png") left bottom / 200px no-repeat;
+		}
 	}
 
 	@media (max-width: 767px) {
@@ -133,15 +154,6 @@
 
 	.rootpage__list li:not(:last-child) {
 		margin: 0px 0px 15px 0px;
-	}
-
-	.contacts {
-		margin-left: auto;
-	}
-
-	.contacts a:not(:last-child) {
-		margin: 0px 0px 15px 0px;
-		display: block;
 	}
 </style>
 
